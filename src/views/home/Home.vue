@@ -1,16 +1,16 @@
 <template>
-    <Label :currentIndex="0" />
+    <Nav :currentIndex="0" />
     <div class="wrapper">
         <search />
     </div>
 </template>
 
 <script>
-import Label from '../../components/Label.vue'
+import Nav from '../../components/Nav.vue'
 import Search from '../../components/Search.vue'
 export default {
     name: 'Home',
-    components: { Label, Search },
+    components: { Nav, Search },
     setup() {
         
     },

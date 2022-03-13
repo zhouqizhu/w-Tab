@@ -1,38 +1,56 @@
 <template>
-    <div class="search">
-        <div class="search_name">
-            <span></span>
-        </div>
-        <form class="search__form" :action="searchEngine" ref="search_form" target="_blank">
-            <input class="search__form__input" type="text" value="搜索">
-            <input class="search__form__submit" type="submit" value="搜索">
+    <div class="search" >
+        <select class="search__select" v-model="selectedType">
+            <option v-for="item in searchEngine" :key="item" :value="item.value">
+                {{item.label}}
+            </option>
+        </select>
+        <form class="search__form" ref="search_form" target="_blank">
+            <input class="search__form__input" type="text" v-model="searchText" placeholder="输入并搜索">
+            <input class="search__form__submit" type="submit" value="搜索" @click="searchBar">
         </form>
     </div>
 </template>
+
 <script>
+import {searchEngine} from '../db/db'
 export default {
     name: 'Search',
-    setup() {
-        
+    data() {
+        return {
+            searchText: '',
+            searchEngine,
+            selectedType: 0,
+        }
     },
+    methods: {
+        searchBar() {
+            window.open(this.searchEngine[this.selectedType].url + this.searchText)
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
 .search {
     display: flex;
-    width: 100%;
     position: absolute;
     left: 50%;
+    &__select {
+        display: inline-block;
+        text-align: center;
+        margin-left: -50%;
+        height: .4rem;
+        width: .6rem;
+    }
     &__form {
+        display: inline-block;
         &__input {
             width: 3.5rem;
             height: .4rem;
-            margin-left: -50%;
         }
         &__submit {
-            height: .45rem;
+            height: .4rem;
             width: .8rem;
-            margin-left: .1rem;
         }
     }
 }

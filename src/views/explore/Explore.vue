@@ -1,12 +1,12 @@
 <template>
-    <Label :currentIndex="1" />    2
+    <Nav :currentIndex="1" />    2
 </template>
 
 <script>
-import Label from '../../components/Label.vue'
+import Nav from '../../components/Nav.vue'
 export default {
     name: 'Explore',
-    components: { Label },
+    components: { Nav },
     setup() {
         
     },

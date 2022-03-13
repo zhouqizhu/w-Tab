@@ -14,7 +14,7 @@
 
 <script>
 export default {
-    name: 'Label',
+    name: 'Nav',
     props: ['currentIndex'],
     setup() {
         const labelList = [
