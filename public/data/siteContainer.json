@@ -1,0 +1,55 @@
+[
+    {
+      "id": "1",
+      "name": "Github",
+      "icon": "ri-github-line",
+      "link": "https://github.com/"
+    },
+    {
+      "id": "2",
+      "name": "Reddit",
+      "icon": "ri-reddit-line",
+      "link": "https://reddit.com"
+    },
+    {
+      "id": "3",
+      "name": "YouTube",
+      "icon": "ri-youtube-line",
+      "link": "https://youtube.com/"
+    },
+    {
+      "id": "4",
+      "name": "Github",
+      "icon": "ri-github-line",
+      "link": "https://github.com/"
+    },
+    {
+      "id": "5",
+      "name": "Reddit",
+      "icon": "ri-reddit-line",
+      "link": "https://reddit.com"
+    },
+    {
+      "id": "6",
+      "name": "YouTube",
+      "icon": "ri-youtube-line",
+      "link": "https://youtube.com/"
+    },    {
+      "id": "7",
+      "name": "Github",
+      "icon": "ri-github-line",
+      "link": "https://github.com/"
+    },
+    {
+      "id": "8",
+      "name": "Reddit",
+      "icon": "ri-reddit-line",
+      "link": "https://reddit.com"
+    },
+    {
+      "id": "9",
+      "name": "YouTube",
+      "icon": "ri-youtube-line",
+      "link": "https://youtube.com/"
+    }
+  ]
