@@ -26,7 +26,6 @@ export default {
         async getSiteList() {
             let siteList = await get('/data/siteContainer.json')
             this.siteList = siteList
-            console.log(this.siteList)
         }
     }
 }
@@ -34,10 +33,12 @@ export default {
 
 <style lang="scss" scoped>
 .siteContainer {
+    display: inline-block;
     width: 5.5rem;
     height: 4rem;
     font-size: .2rem;
     font-size: 0;
+    vertical-align: top;
     &__site {
         display: inline-block;
         overflow: hidden;
@@ -64,6 +65,6 @@ export default {
 .siteContainer__site:hover {
     background-color: #57a0d9;
     transform: translateY(-0.03rem);
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.35);
 }
 </style>

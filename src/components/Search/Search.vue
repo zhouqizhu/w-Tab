@@ -40,12 +40,9 @@ export default {
 <style lang="scss" scoped>
 .search {
     display: flex;
-    position: absolute;
-    left: 50%;
+    margin: 1rem auto .5rem auto;
     &__select {
-        display: inline-block;
         text-align: center;
-        margin-left: -50%;
         height: .4rem;
         width: .8rem;
         border-radius: 15% 0 0 15%;
@@ -53,7 +50,6 @@ export default {
         border-width: .01rem;
     }
     &__form {
-        display: inline-block;
         &__input {
             width: 3.5rem;
             height: .4rem;

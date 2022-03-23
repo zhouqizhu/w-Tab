@@ -29,7 +29,6 @@ export default {
 <style lang="scss" scoped>
 .label {
     display: flex;
-    box-sizing: border-box;
     position: absolute;
     padding: 0 0.2rem;
     left: .3rem;

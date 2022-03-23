@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "name": "music",
+        "icon": "ri-reddit-line",
+        "links": [
+            {
+                "iconfont": "ri-reddit-line",
+                "name": "Inspirational",
+                "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            },
+            {
+                "iconfont": "ri-reddit-line",
+                "name": "Inspirational",
+                "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            },
+            {
+                "iconfont": "ri-reddit-line",
+                "name": "Inspirational",
+                "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            },
+            {
+                "iconfont": "ri-reddit-line",
+                "name": "Inspirational",
+                "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            }
+        ],
+        "icons": ["ri-reddit-line","ri-reddit-line","ri-reddit-line","ri-reddit-line"]
+    }
+]

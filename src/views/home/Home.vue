@@ -1,37 +1,38 @@
 <template>
-    <Nav :currentIndex="0" />
-    <div class="wrapper">
-        <search />
-    </div>
-    <div class="siteArea">
-        <SiteArea />
-    </div>
+<div class="wrapper">
+        <Nav class="nav" :currentIndex="0" />
+        <Search />
+        <div class="wrapper__site">
+            <DrawerLeft />
+            <SiteArea class="wrapper__site__siteBlock" />
+            <DrawerRight />
+        </div>
+</div>
 </template>
 
 <script>
 import Nav from '../../components/Nav/Nav.vue'
 import Search from '../../components/Search/Search.vue'
 import SiteArea from '../../components/searchArea/SiteArea.vue'
+import DrawerLeft from '../../components/Drawer/DrawerLeft.vue'
+import DrawerRight from '../../components/Drawer/DrawerRight.vue'
 export default {
     name: 'Home',
-    components: { Nav, Search, SiteArea },
-    setup() {
-        
-    },
+    components: { Nav, Search, SiteArea, DrawerLeft, DrawerRight }
 }
 </script>
 
 <style lang="scss" scoped>
 .wrapper {
-    position: absolute;
-    display: block;
-    top: 2rem;
-    width: 100%;
-}
-.siteArea {
-    display: inline-block;
-    height: 4rem;
-    width: 4rem;
-    margin: 3rem auto auto 5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    &__site {
+        margin: 0 auto;
+        &__siteBlock {
+            margin: 0 .2rem 0 .2rem;
+        }
+    }
 }
 </style>
