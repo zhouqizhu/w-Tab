@@ -30,6 +30,7 @@ export default {
     position: relative;
     &__site {
         margin: 0 auto;
+        position: relative;
         &__siteBlock {
             margin: 0 .2rem 0 .2rem;
         }

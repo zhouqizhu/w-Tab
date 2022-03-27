@@ -7,32 +7,32 @@
 </template>
 
 <script>
-// import { get } from '../../utility/request'
+import { get } from '../../utility/request'
 export default {
     name: 'DrawerRight',
-    // data() {
-    //     return {
-    //         drawerList: '',
-    //     }
-    // },
-    // mounted() {
-    //     this.getDrawerList()
-    // },
-    // methods: {
-    //     async getDrawerList() {
-    //         let drawerList = await get('/data/siteListDrawer.json')
-    //         this.drawerList = drawerList
-    //     }
-    // }
+    data() {
+        return {
+            drawerList: '',
+        }
+    },
+    mounted() {
+        this.getDrawerList()
+    },
+    methods: {
+        async getDrawerList() {
+            let drawerList = await get('/data/siteListDrawer.json')
+            this.drawerList = drawerList
+        }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 .drawerBlock {
     display: inline-block;
-    margin-right: .3rem;
     width: 1.5rem;
     height: 4rem;
-    background-color: black;
+    background-color: #9b9a99;
+    border-radius: .15rem;
 }
 </style>

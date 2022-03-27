@@ -1,9 +1,12 @@
-<template >
+<template>
     <div class="drawerfloor">
-        <div :class="['drawerfloor__locker', shouldOpen]" :style="style" @click="toggleMenu">+</div>
+        <div :class="['drawerfloor__locker', shouldOpen]" :style="style" @click="toggleMenu">{{floorName}}</div>
         <div v-if="shouldOpen" class="drawerfloor__item">
-            <transition class="draweritem" v-for="(item, index) in items" :key="index">
-			    <span class="itemText">{{item}}</span>
+            <transition v-for="(item, index) in items" :key="index">
+                <a class="singleItem" :href="item.link">
+                    <i :class="item.iconfont"></i>
+                    <span>{{item.name}}</span>
+                </a>
             </transition>
         </div>
     </div>
@@ -14,15 +17,22 @@ import { reactive } from '@vue/reactivity';
 import { computed } from '@vue/runtime-core';
 export default {
     name: 'DrawerFloor',
+    props: {
+        drawerList: Array, default: [],
+        floorName: String, default: ""
+        },
     setup(props) {
         const state = reactive({
             isOpen: false,
             style: { width: props.size + 'px', height: props.size + 'px' },
-	        items: ['foo', 'bar', 'hello', 'world', 'more', 'items', '1'],
+	        items: [],
+            floorName: ''
         })
         const shouldOpen = computed(() => {
             return  state.isOpen 
         })
+        state.items = props.drawerList
+        state.floorName = props.floorName   
         const toggleMenu = () => {
             if (state.isOpen) {
                 state.isOpen = false;
@@ -36,37 +46,48 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../../style/viriables.scss';
 .drawerfloor {
-    position: relative;
     font-size: .35rem;
     font-weight: bold;
-    width: .8rem;
-    height: .5rem;
+    width: 1rem;
+    margin: .2rem .25rem;
     &__locker {
-        background-color: aqua;
         display: flex;
+        color: #fff;
         justify-content: center;
         align-items: center;
         transition: all 0.2s ease;
         position: relative;
-        z-index: 6;
+        border-radius: .12rem;
     }
     &__item {
-        position: relative;
 	    width: 4rem;
-	    height: .8rem;
-        background-color: aqua;
-        line-height: .8rem;
-        vertical-align: middle;
-        font-size: .2rem;
+        background-color: #c8c8c8;
+        border-radius: .12rem;
+        position: absolute;
     }
 }
-.draweritem {
+.singleItem {
     display: inline-block;
-    width: .6rem;
-    height: .8rem;
-}
-.drawerfloor__locker.open {
-    transform: rotateZ(45deg);
+    text-decoration: none;
+    width: $site-width;
+    height: $site-height;
+    font-size: .01rem;
+    text-align: center;
+    >i{
+        display: block;
+        margin: 0 auto;
+        color: #494949;
+        margin-top: .1rem;
+        font-size: $icon-fontsize;
+        width: $icon-width;
+        height: $icon-height;
+        border: .01rem solid;
+        border-radius: 50%;
+    }
+    >span {
+        font-size: .1rem;
+    }
 }
 </style>
