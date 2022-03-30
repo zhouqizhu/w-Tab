@@ -1,7 +1,7 @@
 <template>
     <div class="drawerBlock">
         <div class="drawerfloor" v-for="(item, index) in drawerList" :key="index">
-            <DrawerFloor :drawerList="item.links" :floorName="item.name" />
+            <DrawerFloor :floorList="item.links" :floorName="item.name" />
         </div>
     </div>
 </template>

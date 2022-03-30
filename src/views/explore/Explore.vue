@@ -1,11 +1,39 @@
 <template>
     <Nav :currentIndex="1" />
+    <div v-if="transfer">
+        <SiteCloud class="sitecloud" :exploreList="exploreList"  />
+    </div>
 </template>
 
 <script>
-import Nav from '../../components/Nav/Nav.vue'
+import { reactive, toRefs } from '@vue/reactivity';
+import Nav from '../../components/Nav/Nav.vue';
+import SiteCloud from '../../components/SiteCloud/SiteCloud.vue'
+import { get } from '../../utility/request';
 export default{
     name:'Explore',
-    components: { Nav }
+    components: { Nav, SiteCloud },
+    setup() {
+        const state = reactive({
+            exploreList: [],
+            transfer: false
+        })
+        const getExploreList = async () => {
+            const result = await get('/data/exploreSiteList.json')
+            state.exploreList = result
+            state.transfer = true
+        }
+        getExploreList()
+        return{ getExploreList, ...toRefs(state) }
+    }
 }
 </script>
+
+<style lang="scss" scoped>
+.sitecloud {
+    position: absolute;
+    top: 1rem;
+    width: 100%;
+    height: 100%;
+}
+</style>

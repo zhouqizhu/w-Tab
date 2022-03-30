@@ -18,9 +18,9 @@ import { computed } from '@vue/runtime-core';
 export default {
     name: 'DrawerFloor',
     props: {
-        drawerList: Array, default: [],
+        floorList: Array, default: [],
         floorName: String, default: ""
-        },
+    },
     setup(props) {
         const state = reactive({
             isOpen: false,
@@ -31,7 +31,7 @@ export default {
         const shouldOpen = computed(() => {
             return  state.isOpen 
         })
-        state.items = props.drawerList
+        state.items = props.floorList
         state.floorName = props.floorName   
         const toggleMenu = () => {
             if (state.isOpen) {

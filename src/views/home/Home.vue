@@ -13,7 +13,7 @@
 <script>
 import Nav from '../../components/Nav/Nav.vue'
 import Search from '../../components/Search/Search.vue'
-import SiteArea from '../../components/searchArea/SiteArea.vue'
+import SiteArea from '../../components/SearchArea/SiteArea.vue'
 import DrawerLeft from '../../components/Drawer/DrawerLeft.vue'
 import DrawerRight from '../../components/Drawer/DrawerRight.vue'
 export default {
