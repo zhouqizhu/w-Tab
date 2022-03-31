@@ -1,7 +1,7 @@
 <template>
     <div class="siteContainer">
         <div class="siteContainer__site" v-for="item in siteList" :key="item.id">
-            <a :href="item.link">
+            <a :href="item.link" target="_blank">
                 <i :class="item.icon"></i>
             </a>
             <span>{{item.name}}</span>
@@ -33,6 +33,7 @@ export default {
 <style lang="scss" scoped>
 @import '../../style/viriables.scss';
 .siteContainer {
+    position: relative;
     display: inline-block;
     width: 5.5rem;
     height: 4rem;

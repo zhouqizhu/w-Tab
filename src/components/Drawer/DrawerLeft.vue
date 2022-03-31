@@ -16,7 +16,7 @@ export default {
     setup() {
         const drawerList = ref([])
         const getDrawerList = async () => {
-            const result = await get('/data/siteDrawerList.json')
+            const result = await get('/data/siteDrawerListLeft.json')
             drawerList.value = result
         }
         getDrawerList()

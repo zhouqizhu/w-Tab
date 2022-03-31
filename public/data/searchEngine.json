@@ -1,21 +1,94 @@
 [
-    {
-      "label": "Google",
-      "value": "0",
-      "url": "https://www.google.com/search?q=",
-      "icon": "../icon/Google.svg"
-    },
-    {
-      "label": "百度",
-      "value": "1",
-      "url": "https://www.baidu.com/s?wd=",
-      "icon": "../icon/Google.svg"
-    },
-    {
-      "label": "Bing",
-      "value": "2",
-      "url": "https://cn.bing.com/search?q=",
-      "icon": "../icon/Google.svg"
-    }
+  {
+    "id": "1",
+    "name": "常用",
+    "content": [
+      {
+        "label": "Google",
+        "value": "0",
+        "url": "https://www.google.com/search?q="
+      },
+      {
+        "label": "百度",
+        "value": "1",
+        "url": "https://www.baidu.com/s?wd="
+      },
+      {
+        "label": "Bing",
+        "value": "2",
+        "url": "https://cn.bing.com/search?q="
+      }
+    ]
+  }, {
+    "id": "2",
+    "name": "生活",
+    "content": [
+      {
+        "label": "Google",
+        "value": "0",
+        "url": "https://www.google.com/search?q="
+      }
+    ]
+  }, {
+    "id": "3",
+    "name": "工具",
+    "content": [
+      {
+        "label": "Google",
+        "value": "0",
+        "url": "https://www.google.com/search?q="
+      },
+      {
+        "label": "百度",
+        "value": "1",
+        "url": "https://www.baidu.com/s?wd="
+      },
+      {
+        "label": "Bing",
+        "value": "2",
+        "url": "https://cn.bing.com/search?q="
+      }
+    ]
+  }, {
+    "id": "4",
+    "name": "社区",
+    "content": [
+      {
+        "label": "Google",
+        "value": "0",
+        "url": "https://www.google.com/search?q="
+      },
+      {
+        "label": "百度",
+        "value": "1",
+        "url": "https://www.baidu.com/s?wd="
+      },
+      {
+        "label": "Bing",
+        "value": "2",
+        "url": "https://cn.bing.com/search?q="
+      }
+    ]
+  }, {
+    "id": "5",
+    "name": "求职",
+    "content": [
+      {
+        "label": "Google",
+        "value": "0",
+        "url": "https://www.google.com/search?q="
+      },
+      {
+        "label": "百度",
+        "value": "1",
+        "url": "https://www.baidu.com/s?wd="
+      },
+      {
+        "label": "Bing",
+        "value": "2",
+        "url": "https://cn.bing.com/search?q="
+      }
+    ]
+  }
 ]
   

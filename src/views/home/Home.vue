@@ -1,12 +1,14 @@
 <template>
 <div class="wrapper">
-        <Nav class="nav" :currentIndex="0" />
-        <Search />
-        <div class="wrapper__site">
-            <DrawerLeft />
-            <SiteArea class="wrapper__site__siteBlock" />
-            <DrawerRight />
-        </div>
+    <Nav class="nav" :currentIndex="0" />
+    <div class="container">
+            <Search />
+    <div class="wrapper__site">
+        <DrawerLeft />
+        <SiteArea class="wrapper__site__siteBlock" />
+        <DrawerRight />
+    </div>
+    </div>
 </div>
 </template>
 
@@ -35,5 +37,10 @@ export default {
             margin: 0 .2rem 0 .2rem;
         }
     }
+}
+.container {
+    text-align: center;
+    width: 100%;
+    position: absolute;
 }
 </style>

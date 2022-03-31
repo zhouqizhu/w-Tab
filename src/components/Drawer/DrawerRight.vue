@@ -1,28 +1,26 @@
 <template>
     <div class="drawerBlock">
-        <div class="drawer" v-for="item in drawerList" :key="item.id">
-            {{item.name}}
+        <div class="drawerfloor" v-for="(item, index) in drawerList" :key="index">
+            <DrawerFloor :floorList="item.links" :floorName="item.name" />
         </div>
     </div>
 </template>
 
 <script>
+import DrawerFloor from './DrawerFloor/DrawerFloor.vue'
 import { get } from '../../utility/request'
+import { ref } from '@vue/reactivity'
 export default {
     name: 'DrawerRight',
-    data() {
-        return {
-            drawerList: '',
+    components: { DrawerFloor },
+    setup() {
+        const drawerList = ref([])
+        const getDrawerList = async () => {
+            const result = await get('/data/siteDrawerListRight.json')
+            drawerList.value = result
         }
-    },
-    mounted() {
-        this.getDrawerList()
-    },
-    methods: {
-        async getDrawerList() {
-            let drawerList = await get('/data/siteListDrawer.json')
-            this.drawerList = drawerList
-        }
+        getDrawerList()
+        return { getDrawerList, drawerList }
     }
 }
 </script>
@@ -33,6 +31,11 @@ export default {
     width: 1.5rem;
     height: 4rem;
     background-color: #9b9a99;
-    border-radius: .15rem;
+    border-radius:.15rem;
+    vertical-align: top;
+}
+.drawerfloor {
+    position: relative;
+    display: block;
 }
 </style>

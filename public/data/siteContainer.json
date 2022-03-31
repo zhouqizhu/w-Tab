@@ -4,52 +4,100 @@
       "name": "Github",
       "icon": "ri-github-line",
       "link": "https://github.com/"
-    },
-    {
+    }, {
       "id": "2",
-      "name": "Reddit",
-      "icon": "ri-reddit-line",
-      "link": "https://reddit.com"
-    },
-    {
+      "name": "豆瓣",
+      "icon": "ri-douban-line",
+      "link": "https://www.douban.com/"
+    }, {
       "id": "3",
-      "name": "YouTube",
-      "icon": "ri-youtube-line",
-      "link": "https://youtube.com/"
-    },
-    {
+      "name": "哔哩哔哩",
+      "icon": "ri-bilibili-fill",
+      "link": "https://www.bilibili.com/"
+    }, {
       "id": "4",
-      "name": "Github",
-      "icon": "ri-github-line",
-      "link": "https://github.com/"
-    },
-    {
+      "name": "知乎",
+      "icon": "ri-zhihu-line",
+      "link": "https://www.zhihu.com/"
+    }, {
       "id": "5",
       "name": "Reddit",
-      "icon": "ri-reddit-line",
+      "icon": "ri-soundcloud-line",
       "link": "https://reddit.com"
-    },
-    {
+    }, {
       "id": "6",
       "name": "YouTube",
       "icon": "ri-youtube-line",
       "link": "https://youtube.com/"
-    },    {
+    }, {
       "id": "7",
-      "name": "Github",
-      "icon": "ri-github-line",
-      "link": "https://github.com/"
-    },
-    {
+      "name": "stackoverflow",
+      "icon": "ri-stack-overflow-line",
+      "link": "https://stackoverflow.com/"
+    }, {
       "id": "8",
-      "name": "Reddit",
-      "icon": "ri-reddit-line",
-      "link": "https://reddit.com"
-    },
-    {
+      "name": "qq邮箱",
+      "icon": "ri-mail-line",
+      "link": "https://mail.qq.com/"
+    }, {
       "id": "9",
-      "name": "YouTube",
-      "icon": "ri-youtube-line",
-      "link": "https://youtube.com/"
+      "name": "Unsplash",
+      "icon": "ri-unsplash-fill",
+      "link": "https://unsplash.com/"
+    }, {
+      "id": "10",
+      "name": "soundcloud",
+      "icon": "ri-soundcloud-fill",
+      "link": "https://soundcloud.com/"
+    }, {
+      "id": "11",
+      "name": "leetcode",
+      "icon": "ri-code-line",
+      "link": "https://leetcode-cn.com/"
+    }, {
+      "id": "12",
+      "name": "鱼塘热榜",
+      "icon": "ri-rhythm-fill",
+      "link": "https://mo.fish/"
+    }, {
+      "id": "13",
+      "name": "独立精神",
+      "icon": "ri-gamepad-line",
+      "link": "https://indienova.com/"
+    }, {
+      "id": "14",
+      "name": "微博",
+      "icon": "ri-weibo-line",
+      "link": "https://weibo.com/"
+    }, {
+      "id": "15",
+      "name": "牛客",
+      "icon": "ri-file-code-line",
+      "link": "https://www.nowcoder.com/"
+    }, {
+      "id": "16",
+      "name": "Medium",
+      "icon": "ri-medium-line",
+      "link": "https://medium.com/"
+    }, {
+      "id": "17",
+      "name": "站酷",
+      "icon": "ri-zcool-line",
+      "link": "https://www.zcool.com.cn/"
+    }, {
+      "id": "18",
+      "name": "Notion",
+      "icon": "ri-todo-fill",
+      "link": "https://www.notion.so/"
+    }, {
+      "id": "19",
+      "name": "创造者日报",
+      "icon": "ri-functions",
+      "link": "https://creatorsdaily.com/"
+    }, {
+      "id": "9",
+      "name": "Unsplash",
+      "icon": "ri-unsplash-fill",
+      "link": "https://unsplash.com/"
     }
   ]

@@ -4,7 +4,10 @@
         <div v-if="shouldOpen" class="drawerfloor__item">
             <transition v-for="(item, index) in items" :key="index">
                 <a class="singleItem" :href="item.link">
-                    <i :class="item.iconfont"></i>
+                    <div>
+                        <img :src="item.logo" style="font-size:.2rem;" alt="" v-if="item.logo">
+                        <span v-else style="font-size:.2rem;">{{item.name}}</span>
+                    </div>
                     <span>{{item.name}}</span>
                 </a>
             </transition>
@@ -75,16 +78,15 @@ export default {
     height: $site-height;
     font-size: .01rem;
     text-align: center;
-    >i{
-        display: block;
+    >div{
         margin: 0 auto;
         color: #494949;
         margin-top: .1rem;
-        font-size: $icon-fontsize;
         width: $icon-width;
         height: $icon-height;
         border: .01rem solid;
         border-radius: 50%;
+        overflow: hidden;
     }
     >span {
         font-size: .1rem;
