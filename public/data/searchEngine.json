@@ -5,18 +5,19 @@
     "content": [
       {
         "label": "Google",
-        "value": "0",
         "url": "https://www.google.com/search?q="
       },
       {
         "label": "百度",
-        "value": "1",
         "url": "https://www.baidu.com/s?wd="
       },
       {
         "label": "Bing",
-        "value": "2",
         "url": "https://cn.bing.com/search?q="
+      },
+      {
+        "label": "搜狗",
+        "url": "https://www.sogou.com/web?query="
       }
     ]
   }, {
@@ -24,9 +25,16 @@
     "name": "生活",
     "content": [
       {
-        "label": "Google",
-        "value": "0",
-        "url": "https://www.google.com/search?q="
+        "label": "京东",
+        "url": "https://search.jd.com/Search?keyword="
+      },
+      {
+        "label": "就诊问问",
+        "url": "https://ask.nocode.com/search?q="
+      },
+      {
+        "label": "今日头条",
+        "url": "https://so.toutiao.com/search?dvpf=pc&source=input&keyword="
       }
     ]
   }, {
@@ -34,59 +42,87 @@
     "name": "工具",
     "content": [
       {
-        "label": "Google",
-        "value": "0",
-        "url": "https://www.google.com/search?q="
+        "label": "在线工具",
+        "url": "https://tool.lu/search/?q="
       },
       {
-        "label": "百度",
-        "value": "1",
-        "url": "https://www.baidu.com/s?wd="
+        "label": "阿里盘搜",
+        "url": "https://www.alipansou.com/search?k="
       },
       {
-        "label": "Bing",
-        "value": "2",
-        "url": "https://cn.bing.com/search?q="
+        "label": "果核剥壳",
+        "url": "https://www.ghxi.com/?s="
+      },
+      {
+        "label": "扩展迷",
+        "url": "https://www.extfans.com/search/?q="
       }
     ]
-  }, {
+  },{
     "id": "4",
     "name": "社区",
     "content": [
       {
-        "label": "Google",
-        "value": "0",
-        "url": "https://www.google.com/search?q="
+        "label": "GitHub",
+        "url": "https://github.com/search?q="
       },
       {
-        "label": "百度",
-        "value": "1",
-        "url": "https://www.baidu.com/s?wd="
+        "label": "知乎",
+        "url": "https://www.zhihu.com/search?q="
       },
       {
-        "label": "Bing",
-        "value": "2",
-        "url": "https://cn.bing.com/search?q="
+        "label": "豆瓣",
+        "url": "https://www.douban.com/search?source=suggest&q="
+      },
+      {
+        "label": "掘金",
+        "url": "https://juejin.cn/search?utm_source=infinitynewtab.com&query="
+      },
+      {
+        "label": "CSDN",
+        "url": "https://so.csdn.net/so/search?spm=1000.2115.3001.4502&q="
       }
     ]
   }, {
     "id": "5",
+    "name": "音频",
+    "content": [
+      {
+        "label": "网易云",
+        "url": "https://music.163.com/#/search/m/?s="
+      },
+      {
+        "label": "bilibili",
+        "url": "https://search.bilibili.com/all?keyword=lck"
+      },
+      {
+        "label": "腾讯视频",
+        "url": "https://v.qq.com/x/search/?q="
+      },
+      {
+        "label": "抖音",
+        "url": "https://www.douyin.com/search/"
+      }
+    ]
+  }, {
+    "id": "6",
     "name": "求职",
     "content": [
       {
-        "label": "Google",
-        "value": "0",
-        "url": "https://www.google.com/search?q="
+        "label": "Boss直聘",
+        "url": "https://www.zhipin.com/job_detail/?query="
       },
       {
-        "label": "百度",
-        "value": "1",
-        "url": "https://www.baidu.com/s?wd="
+        "label": "智联招聘",
+        "url": "https://sou.zhaopin.com/?jl=639&kw="
       },
       {
-        "label": "Bing",
-        "value": "2",
-        "url": "https://cn.bing.com/search?q="
+        "label": "海投网",
+        "url": "https://www.haitou.cc/search-"
+      },
+      {
+        "label": "猎聘网",
+        "url": "https://www.liepin.com/zhaopin/?inputFrom=www_index&workYearCode=0&key="
       }
     ]
   }

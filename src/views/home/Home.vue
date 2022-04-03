@@ -33,14 +33,13 @@ export default {
         })
         const controlBar = () => {
             state.changeImg = true
-            window.location.reload(document.body.style.backgroundImage="url(https://api.ixiaowai.cn/gqapi/gqapi.php)")
-            
+            window.location.reload(document.body.style.background="url(https://api.ixiaowai.cn/gqapi/gqapi.php)")
             setTimeout(() => {
                 state.changeImg = false
             }, 2000)
         }
         onMounted(() => {
-            document.body.style.backgroundImage="url(https://api.ixiaowai.cn/gqapi/gqapi.php)"    
+            document.body.style.background="url(https://api.ixiaowai.cn/gqapi/gqapi.php)"   
         })
         return { ...toRefs(state), controlBar}
     }
@@ -65,7 +64,6 @@ export default {
 .container {
     text-align: center;
     width: 100%;
-    position: absolute;
 }
 .controlBar {
     width: .5rem;

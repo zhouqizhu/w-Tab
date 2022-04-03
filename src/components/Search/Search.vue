@@ -64,25 +64,32 @@ export default {
         display: inline-block;
         margin-right: .15rem;
         font-size: .18rem;
+        color: aqua;
     }
     &__form {
         &__input {
-            width: 3.5rem;
-            height: .4rem;
-            border-radius: .12rem 0 0 .12rem;
+            width: 4.5rem;
+            height: .5rem;
+            border-radius: .15rem 0 0 .15rem;
             border-width: .01rem;
+            font-size: .2rem;
+            text-indent:.1rem;
         }
         &__submit {
-            height: .4rem;
+            height: .5rem;
             width: .8rem;
-            border-radius: 0 .12rem .12rem 0;
+            border-radius: 0 .15rem .15rem 0;
             border-width: .01rem;
+            font-size: .2rem;
+            background-color: #fff;
+            border-style: solid solid solid none;
         }
     }
     &__engine {
         display: inline-block;
         margin-right: .15rem;
         font-size: .18rem;
+        color: #cfde00;
     }
 }
 .isSelected {
