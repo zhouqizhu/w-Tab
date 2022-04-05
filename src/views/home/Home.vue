@@ -1,4 +1,5 @@
 <template>
+<div class="bgImg" :style="{background: bgImg}"></div>
 <div class="wrapper" ref="wrapper">
     <Nav class="nav" :currentIndex="0" />
     <div class="container">
@@ -22,31 +23,37 @@ import SiteArea from '../../components/SearchArea/SiteArea.vue'
 import DrawerLeft from '../../components/Drawer/DrawerLeft.vue'
 import DrawerRight from '../../components/Drawer/DrawerRight.vue'
 import { reactive, toRefs } from '@vue/reactivity'
-import { onMounted } from '@vue/runtime-core'
+import { get } from '@/utility/request'
 export default {
     name: 'Home',
     components: { Nav, Search, SiteArea, DrawerLeft, DrawerRight },
     setup() {
         const state = reactive({
             changeImg: false,
-            p: null
+            bgImg: 'url(https://tva1.sinaimg.cn/large/0060lm7Tly1ftg6x22sgcj31hc0u0qh8.jpg)'
         })
-        const controlBar = () => {
+        const controlBar = async () => {
             state.changeImg = true
-            window.location.reload(document.body.style.background="url(https://api.ixiaowai.cn/gqapi/gqapi.php)")
+            const bgImg = await get('/bgImg?c=WallPaperAndroid&a=getAppsByCategory&cid=15&start=0&count=99')
+            const count = Math.floor(Math.random()*99)
             setTimeout(() => {
+                state.bgImg = `url(${bgImg.data[count].url})`
                 state.changeImg = false
             }, 2000)
         }
-        onMounted(() => {
-            document.body.style.background="url(https://api.ixiaowai.cn/gqapi/gqapi.php)"   
-        })
         return { ...toRefs(state), controlBar}
     }
 }
 </script>
 
 <style lang="scss" scoped>
+.bgImg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-repeat:no-repeat;
+    opacity: .6;
+}
 .wrapper {
     height: 100vh;
     display: flex;

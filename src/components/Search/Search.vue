@@ -5,7 +5,7 @@
             {{item.name}}
         </div>
         <div class="search__form">
-            <input class="search__form__input" type="text" v-model="searchText" placeholder="输入并搜索">
+            <input class="search__form__input" type="text" v-model="searchText" placeholder="输入并搜索" @keydown.enter="searchBar">
             <input class="search__form__submit" type="submit" value="搜索" @click="searchBar">
         </div>
         <div class="search__engine" v-for="(i, key) in searchEngine" :key="key"
@@ -21,20 +21,27 @@ export default {
     setup() {
         const state = reactive({
             searchSet: [],
-            selectedType: '',
+            selectedType: 0,
             searchText: '',
             searchType: 0,
             searchEngine: [
                 {
                     "label": "Google",
                     "url": "https://www.google.com/search?q="
-                }, {
+                },
+                {
                     "label": "百度",
                     "url": "https://www.baidu.com/s?wd="
-                }, {
+                },
+                {
                     "label": "Bing",
                     "url": "https://cn.bing.com/search?q="
-                }]
+                },
+                {
+                    "label": "搜狗",
+                    "url": "https://www.sogou.com/web?query="
+                }
+            ]
         })
         const getSearchEngine = async () => {
             let searchSet = await get('/data/searchEngine.json')

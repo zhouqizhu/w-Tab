@@ -1,6 +1,6 @@
 <template>
     <div style="text-align:center">
-        <canvas ref="mycanvas" id="canvas" width="1000" height="500"></canvas>
+        <canvas ref="siteCloud" id="canvas" width="1000" height="500"></canvas>
     </div>
 </template>
 
@@ -8,28 +8,26 @@
 import { onMounted, ref } from '@vue/runtime-core';
 export default {
     name: 'SiteCloud',
-    props: { exploreList: Array, default: ['1','2','3']},
+    props: { exploreList: Array, default: []},
     setup(props) {
-        const mycanvas = ref(null);
+        const siteCloud = ref(null);
         onMounted(() => { canvasApp() })
         const canvasApp = () => {
-            let ctx = mycanvas.value.getContext("2d");
+            let ctx = siteCloud.value.getContext("2d");
             let maxWidth = canvas.width, maxHeight = canvas.height;
             ctx.fillStyle = '#fff';
             ctx.fillRect(0, 0, maxWidth, maxHeight);
 
+            // 定义随机数
             function getRandomNum(minNum, maxNum) {
                 switch (arguments.length) {
                     case 1:
                         return Math.round(Math.random() * minNum + minNum);
-                        break;
                     case 2:
                         return Math.round(
                         Math.random() * (maxNum - minNum) + minNum);
-                        break;
                     case 0:
                         return 0;
-                        break;
                 }
             }
 
@@ -44,11 +42,13 @@ export default {
                 this.speedY = getRandomNum(-2, 2);
             }
             moveContainer.prototype = {
+                // 绘制
                 draw: function (x) {
                     ctx.font = ".1rem serif";
                     ctx.strokeText(`${x}`, this.x, this.y)
                 },
-                move: function () {
+                // 设置边界
+                limit: function () {
                     if (this.x > this.maxWidth - this.r || this.x < this.r) {
                         this.speedX = -this.speedX;
                     }
@@ -70,15 +70,15 @@ export default {
             }
             setInterval(() => {
                 ctx.clearRect(0, 0, maxWidth, maxHeight);
-                ctx.fillStyle = '#fff';
+                ctx.fillStyle = 'red';
                 ctx.fillRect(0, 0, maxWidth, maxHeight);
                 for (let j = 0; j < len; j++) {
                     container[j].draw(siteContainer[j].name);
-                    container[j].move();
+                    container[j].limit();
                 }
             }, 100);
         }
-        return {mycanvas, canvasApp}
+        return {siteCloud, canvasApp}
     }
 }
 </script>
