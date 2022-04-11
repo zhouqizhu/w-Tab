@@ -1,7 +1,11 @@
 <template>
     <div class="drawerBlock">
         <div class="drawerfloor" v-for="(item, index) in drawerList" :key="index">
+<<<<<<< HEAD
             <DrawerFloor class="lalal" :floorList="item.links" :floorName="item.name" />
+=======
+            <DrawerFloor :floorList="item.links" :floorName="item.name" />
+>>>>>>> 668d6d26fd4df43dd865a8416b549859db01fc40
         </div>
     </div>
 </template>
@@ -38,8 +42,11 @@ export default {
     position: relative;
     display: block;
 }
+<<<<<<< HEAD
 .drawerfloor:hover {
     background-color: #57a0d9;
     text-shadow:#000 3px 4px 5px;
 }
+=======
+>>>>>>> 668d6d26fd4df43dd865a8416b549859db01fc40
 </style>

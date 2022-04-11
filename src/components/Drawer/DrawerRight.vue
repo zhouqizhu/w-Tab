@@ -38,9 +38,12 @@ export default {
     position: relative;
     display: block;
 }
+<<<<<<< HEAD
 .drawerfloor:hover {
     background-color: #57a0d9;
     transform: translateY(-0.03rem);
     box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.35);
 }
+=======
+>>>>>>> 668d6d26fd4df43dd865a8416b549859db01fc40
 </style>

@@ -1,6 +1,11 @@
 <template>
+<<<<<<< HEAD
     <div style="text-align:center" @click="skipSite">
         <canvas ref="siteCloud" id="canvas" width="800" height="500"></canvas>
+=======
+    <div style="text-align:center">
+        <canvas ref="siteCloud" id="canvas" width="1000" height="500"></canvas>
+>>>>>>> 668d6d26fd4df43dd865a8416b549859db01fc40
     </div>
 </template>
 
@@ -12,10 +17,15 @@ export default {
     setup(props) {
         const siteCloud = ref(null);
         onMounted(() => { canvasApp() })
+<<<<<<< HEAD
         const siteContainer = props.exploreList;
         const canvasApp = () => {
             let ctx = siteCloud.value.getContext("2d");
             let canvas = document.getElementById('canvas')
+=======
+        const canvasApp = () => {
+            let ctx = siteCloud.value.getContext("2d");
+>>>>>>> 668d6d26fd4df43dd865a8416b549859db01fc40
             let maxWidth = canvas.width, maxHeight = canvas.height;
             ctx.fillStyle = '#fff';
             ctx.fillRect(0, 0, maxWidth, maxHeight);
@@ -61,7 +71,11 @@ export default {
                     this.y += this.speedY;
                 }
             };
+<<<<<<< HEAD
             
+=======
+            let siteContainer = props.exploreList;
+>>>>>>> 668d6d26fd4df43dd865a8416b549859db01fc40
             let len = siteContainer.length
             let container = []
             for (let i = 0; i < len; i++) {
@@ -72,7 +86,11 @@ export default {
             }
             setInterval(() => {
                 ctx.clearRect(0, 0, maxWidth, maxHeight);
+<<<<<<< HEAD
                 ctx.fillStyle = '#f6f6f6';
+=======
+                ctx.fillStyle = 'red';
+>>>>>>> 668d6d26fd4df43dd865a8416b549859db01fc40
                 ctx.fillRect(0, 0, maxWidth, maxHeight);
                 for (let j = 0; j < len; j++) {
                     container[j].draw(siteContainer[j].name);
@@ -80,12 +98,16 @@ export default {
                 }
             }, 100);
         }
+<<<<<<< HEAD
         const skipSite = () => {
             const len = siteContainer.length-1
             let randomSite = siteContainer[Math.floor(Math.random()*len)]
             window.open(randomSite.href)
         }
         return {siteCloud, canvasApp, skipSite}
+=======
+        return {siteCloud, canvasApp}
+>>>>>>> 668d6d26fd4df43dd865a8416b549859db01fc40
     }
 }
 </script>
