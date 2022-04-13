@@ -18,6 +18,7 @@ export default{
             exploreList: [],
             transfer: false
         })
+        // 获取网站云数据
         const getExploreList = async () => {
             const result = await get('/data/exploreSiteList.json')
             state.exploreList = result
@@ -31,9 +32,7 @@ export default{
 
 <style lang="scss" scoped>
 .sitecloud {
-    position: absolute;
+    position: relative;
     top: 1rem;
-    width: 100%;
-    height: 100%;
 }
 </style>

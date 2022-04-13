@@ -2,10 +2,7 @@
 <div class="bgImg" :style="{background: bgImg}"></div>
 <div class="wrapper" ref="wrapper">
     <Nav class="nav" :currentIndex="0" />
-<<<<<<< HEAD
     <Weather class="weather" />
-=======
->>>>>>> 668d6d26fd4df43dd865a8416b549859db01fc40
     <div class="container">
         <Search />
         <div class="wrapper__site">
@@ -23,25 +20,15 @@
 <script>
 import Nav from '../../components/Nav/Nav.vue'
 import Search from '../../components/Search/Search.vue'
-<<<<<<< HEAD
 import SiteArea from '../../components/siteArea/SiteArea.vue'
 import DrawerLeft from '../../components/Drawer/DrawerLeft.vue'
 import DrawerRight from '../../components/Drawer/DrawerRight.vue'
 import Weather from '../../components/Weather/Weather.vue'
-=======
-import SiteArea from '../../components/SearchArea/SiteArea.vue'
-import DrawerLeft from '../../components/Drawer/DrawerLeft.vue'
-import DrawerRight from '../../components/Drawer/DrawerRight.vue'
->>>>>>> 668d6d26fd4df43dd865a8416b549859db01fc40
 import { reactive, toRefs } from '@vue/reactivity'
 import { get } from '@/utility/request'
 export default {
     name: 'Home',
-<<<<<<< HEAD
     components: { Nav, Search, SiteArea, DrawerLeft, DrawerRight, Weather },
-=======
-    components: { Nav, Search, SiteArea, DrawerLeft, DrawerRight },
->>>>>>> 668d6d26fd4df43dd865a8416b549859db01fc40
     setup() {
         const state = reactive({
             changeImg: false,
@@ -83,17 +70,13 @@ export default {
         }
     }
 }
-<<<<<<< HEAD
 .weather {
     width: 1.2rem;
     height: .5rem;
-    background-color: aqua;
     position: absolute;
     right: 0;
     top: 0;
 }
-=======
->>>>>>> 668d6d26fd4df43dd865a8416b549859db01fc40
 .container {
     text-align: center;
     width: 100%;
