@@ -37,7 +37,6 @@ export default {
 		// 获取天气信息
 		const getWeater = async () => {
 			let weatherStatus = await get(`/weather?lat=${state.lat}&lon=${state.lng}&appid=4b60a241d2ca0c2b89b81ef054d162b5`)
-			console.log(weatherStatus)
 			let icon = weatherStatus.weather[0].icon
 			state.temp = Math.floor(weatherStatus.main.temp - 272.15)
 			let weatherIcon = await get('/icons/weatherIcons.json')

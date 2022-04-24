@@ -23,8 +23,8 @@ export default {
     },
     methods: {
         async getSiteList() {
-            let siteList = await get('/data/siteContainer.json')
-            this.siteList = siteList
+            let siteList = await get('/data/siteContainer')
+            this.siteList = siteList.data
         }
     }
 }

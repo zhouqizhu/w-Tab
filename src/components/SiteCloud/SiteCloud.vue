@@ -18,27 +18,28 @@ export default {
         const siteCloudBlock = () => {
             const cloudBall = siteCloud.value
             const cloudItem = document.getElementsByClassName("sitecloud__item")
-            var RADIUS = 300, fallLength = 500, angleX = Math.PI/500, angleY = Math.PI/500
+            let RADIUS = 300, fallLength = 500, angleX = Math.PI/500, angleY = Math.PI/500
             let tags = []
             let CX = cloudBall.offsetWidth/2, CY = cloudBall.offsetHeight/2
             let EX = cloudBall.offsetLeft + document.body.scrollLeft + document.documentElement.scrollLeft,
             EY = cloudBall.offsetTop + document.body.scrollTop + document.documentElement.scrollTop
+            let a,b
             function init(){
-                for(var i=0; i<cloudItem.length; i++){
-                    var a,b
-                    var k = (2*(i+1)-1)/cloudItem.length - 1
-                    var a = Math.acos(k)
-                    var b = a*Math.sqrt(cloudItem.length*Math.PI)
-                    var x = RADIUS * Math.sin(a) * Math.cos(b)
-                    var y = RADIUS * Math.sin(a) * Math.sin(b) 
-                    var z = RADIUS * Math.cos(a)
-                    var t = new tag(cloudItem[i] , x , y , z)
+                for(let i=0; i<cloudItem.length; i++){
+                    
+                    let k = (2*(i+1)-1)/cloudItem.length - 1
+                    let a = Math.acos(k)
+                    let b = a*Math.sqrt(cloudItem.length*Math.PI)
+                    let x = RADIUS * Math.sin(a) * Math.cos(b)
+                    let y = RADIUS * Math.sin(a) * Math.sin(b) 
+                    let z = RADIUS * Math.cos(a)
+                    let t = new tag(cloudItem[i] , x , y , z)
                     cloudItem[i].style.color = "rgb("+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+")"
                     tags.push(t)
                     t.move()
                 }
             }
-            Array.prototype.forEach = function(callback){
+            Array.prototype.forEach1 = function(callback){
                 for(var i=0;i<this.length;i++){
                     callback.call(this[i]);
                 }
@@ -47,7 +48,7 @@ export default {
                 setInterval(function(){
                     rotateX();
                     rotateY();
-                    tags.forEach(function(){ this.move() })
+                    tags.forEach1(function(){ this.move() })
                 } , 27)
             }
             if("addEventListener" in window){
@@ -69,7 +70,7 @@ export default {
             function rotateX(){
                 var cos = Math.cos(angleX);
                 var sin = Math.sin(angleX);
-                tags.forEach(function(){
+                tags.forEach1(function(){
                     var y1 = this.y * cos - this.z * sin;
                     var z1 = this.z * cos + this.y * sin;
                     this.y = y1;
@@ -79,7 +80,7 @@ export default {
             function rotateY(){
                 var cos = Math.cos(angleY);
                 var sin = Math.sin(angleY);
-                tags.forEach(function(){
+                tags.forEach1(function(){
                     var x1 = this.x * cos - this.z * sin;
                     var z1 = this.z * cos + this.x * sin;
                     this.x = x1;

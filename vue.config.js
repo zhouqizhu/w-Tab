@@ -1,6 +1,7 @@
 module.exports = {
     lintOnSave: false, // 关闭格式检查
     productionSourceMap: false, // 打包时不会生成 .map 文件，加快打包速度
+    
     devServer: {
         proxy: {
             '/bgImg': {
@@ -13,10 +14,18 @@ module.exports = {
             },
             '/weather': {
                 target: 'https://api.openweathermap.org/data/2.5/weather',
-                changeOrigin: 'true',
+                changeOrigin: true,
                 ws: true,
                 pathRewrite: {
                     '^/weather': ''
+                }
+            },
+            '/api': {
+                target: 'http://127.0.0.1:3000',
+                changeOrigin: true,
+                ws: true,
+                pathRewrite: {
+                    '^/api': ''
                 }
             }
         }

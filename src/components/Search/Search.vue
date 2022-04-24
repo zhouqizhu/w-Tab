@@ -44,8 +44,8 @@ export default {
             ]
         })
         const getSearchEngine = async () => {
-            let searchSet = await get('/data/searchEngine.json')
-            state.searchSet = searchSet
+            let searchSet = await get('/api/searchEngine')
+            state.searchSet = searchSet.data
         }
         getSearchEngine()
 

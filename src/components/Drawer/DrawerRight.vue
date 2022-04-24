@@ -16,8 +16,8 @@ export default {
     setup() {
         const drawerList = ref([])
         const getDrawerList = async () => {
-            const result = await get('/data/siteDrawerListRight.json')
-            drawerList.value = result
+            const result = await get('/api/siteDrawerListRight')
+            drawerList.value = result.data
         }
         getDrawerList()
         return { getDrawerList, drawerList }
@@ -40,7 +40,6 @@ export default {
 }
 .drawerfloor:hover {
     background-color: #57a0d9;
-    transform: translateY(-0.03rem);
     box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.35);
 }
 </style>
