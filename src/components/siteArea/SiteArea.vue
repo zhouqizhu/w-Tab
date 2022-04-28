@@ -33,10 +33,6 @@ export default {
 <style lang="scss" scoped>
 @import '../../style/viriables.scss';
 .siteContainer {
-    position: relative;
-    display: inline-block;
-    width: 5.5rem;
-    height: 4rem;
     font-size: 0;
     vertical-align: top;
     &__site {
@@ -44,32 +40,29 @@ export default {
         overflow: hidden;
         width: $site-width;
         height: $site-height;
-        text-align: center;
-        vertical-align: middle;
         font-size: 0;
         background-color: #e4e6e6;
-        margin: .1rem .1rem 0 0;
-        border-radius: .1rem;
+        margin: .2rem .2rem 0 0;
+        border-radius: .8rem;
         >a {
             text-decoration: none;
             color: #494949;
             display: block;
             font-size: $icon-fontsize;
+            height: $icon-height;
             >i {
-                width: $icon-width;
-                height: $icon-height;
                 border: .01rem solid;
                 border-radius: 50%;
             }
         }
         >span {
-            font-size: .1rem;
+            font-size: 1rem;
         }
     }
 }
 .siteContainer__site:hover {
     background-color: #57a0d9;
-    transform: translateY(-0.03rem);
-    box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.35);
+    transform: translateY(-0.3rem);
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.35);
 }
 </style>

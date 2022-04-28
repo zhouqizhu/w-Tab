@@ -65,29 +65,32 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import '../../style/viriables.scss';
 .search {
-    margin: 1rem auto .5rem auto;
+    margin: 6rem auto 2rem auto;
     &__select {
         display: inline-block;
+        width: calc(.1*$input-width);
+        height: 2.5rem;
         margin-right: .15rem;
-        font-size: .18rem;
-        color: aqua;
+        color: rgb(0, 255, 26);
     }
     &__form {
         &__input {
-            width: 4.5rem;
-            height: .5rem;
-            border-radius: .15rem 0 0 .15rem;
+            width: $input-width;
+            height: 3rem;
+            border-radius: 2rem 0 0 2rem;
             border-width: .01rem;
-            font-size: .2rem;
-            text-indent:.1rem;
+            font-size: 80%;
+            text-indent:1.5rem;
+            border-style: solid none solid solid;
         }
         &__submit {
-            height: .5rem;
-            width: .8rem;
-            border-radius: 0 .15rem .15rem 0;
+            height: 3rem;
+            width: 12%;
+            border-radius: 0 2rem 2rem 0;
             border-width: .01rem;
-            font-size: .2rem;
+            font-size: 80%;
             background-color: #fff;
             border-style: solid solid solid none;
         }
@@ -95,7 +98,8 @@ export default {
     &__engine {
         display: inline-block;
         margin-right: .15rem;
-        font-size: .18rem;
+        width: calc(.2*$input-width);
+        height: 2rem;
         color: #cfde00;
     }
 }

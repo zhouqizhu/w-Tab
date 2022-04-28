@@ -28,18 +28,15 @@ export default {
 <style lang="scss" scoped>
 .drawerBlock {
     display: inline-block;
-    width: 1.5rem;
-    height: 4rem;
-    background-color: #9b9a99;
     border-radius:.15rem;
     vertical-align: top;
 }
 .drawerfloor {
-    position: relative;
     display: block;
+    width: 100%;
+    
 }
 .drawerfloor:hover {
     background-color: #57a0d9;
-    text-shadow:#000 3px 4px 5px;
 }
 </style>

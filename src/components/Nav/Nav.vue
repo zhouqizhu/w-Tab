@@ -30,24 +30,20 @@ export default {
 .label {
     display: flex;
     position: absolute;
-    padding: 0 0.2rem;
-    left: .3rem;
-    top: .35rem;
-    width: 40%;
-    height: .4rem;
+    margin: .8rem 0 .5rem 1rem;
     &__item {
         text-align: center;
-        width: 1rem;
         a {
             text-decoration: none;
             color: #111;
         }
     }
     &__title {
-        font-size: .2rem;
-        line-height: .4rem;
-        height: .4rem;
-        color: #111;
+        font-size: 2rem;
+        line-height: 3rem;
+        height: 3rem;
+        color: #000;
+        margin: 0 1rem 0 1rem;
         &:hover {
             background-color: #e5e5e5;
         }

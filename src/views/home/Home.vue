@@ -6,9 +6,11 @@
     <div class="container">
         <Search />
         <div class="wrapper__site">
-            <DrawerLeft />
-            <SiteArea class="wrapper__site__siteBlock" />
-            <DrawerRight />
+            <Saying class="left" />
+            <DrawerLeft class="leftBlock" />
+            <SiteArea class="siteBlock" />
+            <DrawerRight class="rightBlock" />
+            <Saying class="right" />
         </div>
     </div>
     <div class="controlBar">
@@ -24,11 +26,12 @@ import SiteArea from '../../components/siteArea/SiteArea.vue'
 import DrawerLeft from '../../components/Drawer/DrawerLeft.vue'
 import DrawerRight from '../../components/Drawer/DrawerRight.vue'
 import Weather from '../../components/Weather/Weather.vue'
+import Saying from '../../components/Saying/Saying.vue'
 import { reactive, toRefs } from '@vue/reactivity'
 import { get } from '@/utility/request'
 export default {
     name: 'Home',
-    components: { Nav, Search, SiteArea, DrawerLeft, DrawerRight, Weather },
+    components: { Nav, Search, SiteArea, DrawerLeft, DrawerRight, Weather, Saying },
     setup() {
         const state = reactive({
             changeImg: false,
@@ -57,16 +60,24 @@ export default {
     opacity: .6;
 }
 .wrapper {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     position: relative;
     &__site {
-        margin: 0 auto;
-        position: relative;
-        &__siteBlock {
-            margin: 0 .2rem 0 .2rem;
+        display: flex;
+        .left { flex: 1; }
+        .leftBlock { flex: 1.5; }
+        .siteBlock { flex: 4; }
+        .rightBlock { flex: 1.5; }
+        .right { flex: 1; }
+        @media screen and (max-width: 1024px) {
+            display: flex;
+            .left { flex: 1; }
+            .leftBlock { flex: 1.5; }
+            .siteBlock { display: none; }
+            .rightBlock { flex: 1.5; }
+            .right { flex: 1; }
         }
     }
 }

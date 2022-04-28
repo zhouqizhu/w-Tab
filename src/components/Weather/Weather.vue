@@ -10,14 +10,15 @@
 </template>
 
 <script>
-import { computed, onBeforeMount, reactive, toRefs } from '@vue/runtime-core'
+import { computed, onMounted, reactive, toRefs } from '@vue/runtime-core'
 import { get } from '@/utility/request'
+import { setCookie, getCookie } from '@/utility/cookie'
 export default {
 	name: 'Weather',
     setup() {
 		const state = reactive({
-			lat: 28.721094615451303,
-			lng: 115.82069682161492,
+			lat: null,
+			lng: null,
 			weatherIcon: 'ri-celsius-line',
 			temp: '-',
 		})
@@ -28,6 +29,9 @@ export default {
 					let crd = pos.coords
 					state.lat = crd.latitude
 					state.lng = crd.longitude
+
+					setCookie('lat', state.lat, 1);
+					setCookie('lng', state.lng, 1);
 				},
 				err => {
 					console.error('无法获取地理信息')
@@ -41,9 +45,22 @@ export default {
 			state.temp = Math.floor(weatherStatus.main.temp - 272.15)
 			let weatherIcon = await get('/icons/weatherIcons.json')
 			state.weatherIcon = weatherIcon[0].dayIcon[`${icon}`] ? weatherIcon[0].dayIcon[`${icon}`] : weatherIcon[1].nightIcon[`${icon}`]
+
+			// 设置天气信息缓存，时间为一天
+			setCookie('temp', state.temp, 1);
+			setCookie('weatherIcon', state.weatherIcon, 1);
 		}
-		getWeater()
-		onBeforeMount(() => {getPosition()})
+		onMounted(() => {
+			if(getCookie('lat') && getCookie('lng') && getCookie('temp') && getCookie('weatherIcon')) {
+				state.lat = getCookie('lat');
+				state.lng = getCookie('lng');
+				state.temp = getCookie('temp');
+				state.weatherIcon = getCookie('weatherIcon');
+			} else {
+				getPosition();
+				getWeater();
+			}
+		})
 		return { ...toRefs(state), getWeater}
     },
 }
