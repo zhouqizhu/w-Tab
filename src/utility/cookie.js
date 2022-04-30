@@ -7,8 +7,8 @@ export const setCookie = (name, value, day) => {
 
 // 获取cookie
 export const getCookie = (name) => {
-	let reg = /^(name=)([^;]*)(;|$)/;
+	let reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
 	let arr = document.cookie.match(reg);
-	if(arr) return arr[1];
+	if(arr) return arr[2];
 	else return ''
 }

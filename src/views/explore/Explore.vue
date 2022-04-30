@@ -33,6 +33,6 @@ export default{
 <style lang="scss" scoped>
 .sitecloud {
     position: relative;
-    top: 1rem;
+    top: 18rem;
 }
 </style>

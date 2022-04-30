@@ -27,6 +27,14 @@ module.exports = {
                 pathRewrite: {
                     '^/api': ''
                 }
+            },
+            'saying': {
+                target: 'https://v1.hitokoto.cn/',
+                changeOrigin: true,
+                ws: true,
+                pathRewrite: {
+                    '^/saying': ''
+                }
             }
         }
      }

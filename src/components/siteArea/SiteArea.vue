@@ -62,7 +62,6 @@ export default {
 }
 .siteContainer__site:hover {
     background-color: #57a0d9;
-    transform: translateY(-0.3rem);
     box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.35);
 }
 </style>

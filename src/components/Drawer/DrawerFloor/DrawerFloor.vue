@@ -39,7 +39,7 @@ export default {
         const toggleMenu = () => {
             if (!state.isOpen) {
                 state.isOpen = true
-                masking[0].style.backgroundColor='rgba(0, 0, 0, .1)'
+                masking[0].style.backgroundColor='rgba(0, 0, 0, .6)'
                 masking[0].style.zIndex = 999
             }
         }
@@ -70,6 +70,7 @@ export default {
         line-height: 4.5rem;
     }
     &__item {
+        border-radius: 1rem;
 	    width: $input-width;
         min-height: calc($site-height + 3rem);
         background-color: rgba(200, 200, 200, 0.95);
@@ -80,7 +81,7 @@ export default {
     overflow: hidden;
     width: $site-width;
     height: $site-height;
-    background-color: #e4e6e6;
+    /* background-color: #e4e6e6; */
     margin: 1.5rem 0 0 1rem;
     border-radius: .8rem;
     >a {
@@ -97,7 +98,11 @@ export default {
         }
     }
 }
+.singleItem:hover {
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.35);
+}
 .itemName {
+    color: #fff;
     display: block;
     font-size: 1rem;
 }

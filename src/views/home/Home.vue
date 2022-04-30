@@ -53,10 +53,9 @@ export default {
 
 <style lang="scss" scoped>
 .bgImg {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
-    background-repeat:no-repeat;
     opacity: .6;
 }
 .wrapper {
@@ -73,17 +72,17 @@ export default {
         .right { flex: 1; }
         @media screen and (max-width: 1024px) {
             display: flex;
-            .left { flex: 1; }
+            .left { display: none; }
             .leftBlock { flex: 1.5; }
             .siteBlock { display: none; }
             .rightBlock { flex: 1.5; }
-            .right { flex: 1; }
+            .right { display: none; }
         }
     }
 }
 .weather {
-    width: 1.2rem;
-    height: .5rem;
+    width: 5rem;
+    height: 5rem;
     position: absolute;
     right: 0;
     top: 0;
@@ -93,16 +92,16 @@ export default {
     width: 100%;
 }
 .controlBar {
-    width: .5rem;
-    height: .8rem;
+    width: 5rem;
+    height: 8rem;
     position: absolute;
     bottom: 0;
     right: 0;
-    font-size: .3rem;
+    font-size: 3rem;
 }
 .activeBall {
     position: absolute;
-    width: .25rem;
+    width: 5rem;
     animation: ballMove 2s 2;
 }
 .staticBall {
@@ -110,13 +109,13 @@ export default {
 }
 @keyframes ballMove {
     0% {
-       bottom: .55rem;
+       bottom: 5rem;
     }
     50% {
         bottom: 0rem;
     }
     100% {
-        bottom: .55rem;
+        bottom: 5rem;
     }
 }
 </style>
