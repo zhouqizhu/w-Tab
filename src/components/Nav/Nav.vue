@@ -20,6 +20,7 @@ export default {
         const labelList = [
             { text: '首页', to: { name: 'Home' } },
             { text: '探索', to: { name: 'Explore' } },
+            { text: '信息', to: { name: 'Information' } }
         ]
         return { labelList }        
     },
@@ -39,17 +40,19 @@ export default {
         }
     }
     &__title {
-        font-size: 2rem;
+        font-size: 1.5rem;
         line-height: 3rem;
         height: 3rem;
         color: #000;
         margin: 0 1rem 0 1rem;
         &:hover {
             background-color: #e5e5e5;
+            border-radius: .8rem;
         }
     }
 }
 .Label__item--active {
     background-color: #e5e5e5;
+    border-radius: .8rem;
 }
 </style>

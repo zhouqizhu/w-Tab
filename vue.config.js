@@ -35,6 +35,14 @@ module.exports = {
                 pathRewrite: {
                     '^/saying': ''
                 }
+            },
+            'information': {
+                target: 'https://tenapi.cn/',
+                changeOrigin: 'true',
+                ws: true,
+                pathRewrite: {
+                    '^/information': ''
+                }
             }
         }
      }
