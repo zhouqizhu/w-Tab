@@ -2,6 +2,10 @@
 <div class="bgImg" :style="{background: bgImg}"></div>
 <div class="wrapper" ref="wrapper">
     <Nav class="nav" :currentIndex="0" />
+    <!-- 点击跳转注册登陆页面 -->
+    <router-link to="/login" class="Authentication">
+        <i class="ri-fingerprint-line"></i>
+    </router-link>
     <Weather class="weather" />
     <div class="container">
         <Search />
@@ -20,13 +24,13 @@
 </template>
 
 <script>
-import Nav from '../../components/Nav/Nav.vue'
-import Search from '../../components/Search/Search.vue'
-import SiteArea from '../../components/siteArea/SiteArea.vue'
+import Nav from '../../components/Nav.vue'
+import Search from '../../components/Search.vue'
+import SiteArea from '../../components/SiteArea.vue'
 import DrawerLeft from '../../components/Drawer/DrawerLeft.vue'
 import DrawerRight from '../../components/Drawer/DrawerRight.vue'
-import Weather from '../../components/Weather/Weather.vue'
-import Saying from '../../components/Saying/Saying.vue'
+import Weather from '../../components/Weather.vue'
+import Saying from '../../components/Saying.vue'
 import { reactive, toRefs } from '@vue/reactivity'
 import { get } from '@/utility/request'
 export default {
@@ -45,6 +49,9 @@ export default {
                 state.bgImg = `url(${bgImg.data[count].url})`
                 state.changeImg = false
             }, 2000)
+        }
+        const toLogin = async() => {
+
         }
         return { ...toRefs(state), controlBar}
     }
@@ -79,6 +86,12 @@ export default {
             .right { display: none; }
         }
     }
+}
+.Authentication {
+    position: absolute;
+    text-decoration: none;
+    left: 50%;
+    font-size: 3rem;
 }
 .weather {
     width: 5rem;

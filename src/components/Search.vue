@@ -15,7 +15,7 @@
 
 <script>
 import { reactive, toRefs } from '@vue/reactivity'
-import { get } from '../../utility/request'
+import { get } from '../utility/request'
 export default {
     name: 'Search',
     setup() {
@@ -65,7 +65,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import '../../style/viriables.scss';
+@import '../style/viriables.scss';
 .search {
     margin: 6rem auto 2rem auto;
     &__select {

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { get } from '../../utility/request'
+import { get } from '../utility/request'
 export default {
     name: 'SiteArea',
     data() {
@@ -31,7 +31,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../style/viriables.scss';
+@import '../style/viriables.scss';
 .siteContainer {
     font-size: 0;
     vertical-align: top;

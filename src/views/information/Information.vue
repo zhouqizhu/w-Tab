@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Nav from '../../components/Nav/Nav.vue';
-import Accordion from '../../components/Accordion/accordion.vue';
+import Nav from '../../components/Nav.vue';
+import Accordion from '../../components/Accordion.vue';
 import { reactive, toRefs } from '@vue/reactivity';
 import { get } from '../../utility/request';
 export default{

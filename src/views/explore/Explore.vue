@@ -7,8 +7,8 @@
 
 <script>
 import { reactive, toRefs } from '@vue/reactivity';
-import Nav from '../../components/Nav/Nav.vue';
-import SiteCloud from '../../components/SiteCloud/SiteCloud.vue'
+import Nav from '../../components/Nav.vue';
+import SiteCloud from '../../components/SiteCloud.vue'
 import { get } from '../../utility/request';
 export default{
     name:'Explore',
