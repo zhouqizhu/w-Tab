@@ -31,7 +31,7 @@ export default {
         const useValidate = () => {
             const validateFn = getValidate(rule)
             const execValidate = () => {
-                return validateFn(props.inputInfor)
+                return validateFn(props.value)
             }
 
             onMounted(() => {
@@ -45,8 +45,7 @@ export default {
         useValidate()
         // 监听输入框内容
         const inputChange = (e) => {
-            const value = (e.target).value;
-            context.emit("update:value",value)
+            context.emit("update:value", (e.target).value)
         }
         // 清空输入框内容
         const clearInput = () => {

@@ -22,25 +22,21 @@ export default {
         provide("collectValidate", listener)
         //验证函数
         const validate = (propName) => {
-            console.log(list.value)
             const array = list.value.map((fn) => {
                 if(fn) return fn()
             })
-            console.log(array)
             const one = array.find((item) => {
                 return item.flag === false;
             })
             
             if (one && one.msg) {
                 //验证不通过
-                console.log(one.msg)//弹出错误提示
-                return false;
+                alert(one.msg)//弹出错误提示
+                return false
             } else {
-                return true;
+                return true
             }
         }
-
-        onMounted(() => { listener(), validate() })
         return { list, listener, validate }
     },
 }

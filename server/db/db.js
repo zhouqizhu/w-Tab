@@ -1,11 +1,7 @@
 const mongoose = require('mongoose')
 
-const IP = 'localhost'
-const PORT = 27017
-const DB_NAME = 'org'
-
 //连贯
-mongoose.connect(`mongodb://localhost:27017/navData`, {
+mongoose.connect('mongodb://localhost:27017/navData', {
   useNewUrlParser: true
 })
 

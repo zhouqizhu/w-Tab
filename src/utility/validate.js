@@ -18,7 +18,7 @@ class Validate {
     
     //最小长度
     minLength(data, { params }) {
-        let minLength = params 
+        let minLength = params = 9
         if (data == null) {
             return { flag:false, msg:"数据不能为空" }
         }
@@ -50,7 +50,7 @@ export const getValidate = (rule) => {
         if (typeof item === 'string') {
             fn_list.push({ fn: obj[item] })
         } else if (item instanceof Object) {
-        fn_list.push({
+            fn_list.push({
          //如果item.type为custome自定义类型,校验函数直接使用callback.否则从ob实例获取  
           ...item, 
           fn: item.type === 'custome' ? item.callback : obj[item.type],
